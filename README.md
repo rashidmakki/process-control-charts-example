@@ -1,3 +1,6 @@
+# process-control-charts-example
+examples to solve p-chart, np-chart, c-chart, u-chart
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
