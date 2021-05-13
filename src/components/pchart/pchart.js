@@ -1,0 +1,117 @@
+import React from 'react';
+import { ResponsiveLine } from '@nivo/line';
+import "./pchart.css";
+// make sure parent container have a defined height when using
+// responsive component, otherwise height will be 0 and
+// no chart will be rendered.
+// website examples showcase many properties,
+// you'll often use just a few of them.
+const styleById = {
+    "Upper Control Limit": {
+        strokeDasharray: '12, 6',
+        strokeWidth: 2,
+    },
+    "Lower Control Limit":{
+        strokeDasharray: '12, 6',
+        strokeWidth: 2,
+    },
+    "Control Limit":{
+        strokeDasharray: '12, 6',
+        strokeWidth: 2,
+    },
+    default: {
+        strokeWidth: 1,
+    },
+}
+const DashedLine = ({ series, lineGenerator, xScale, yScale }) => {
+    return series.map(({ id, data, color }) => (
+        <path
+            key={id}
+            d={lineGenerator(
+                data.map(d => ({
+                    x: xScale(d.data.x),
+                    y: yScale(d.data.y),
+                }))
+            )}
+            fill="none"
+            stroke={color}
+            style={styleById[id] || styleById.default}
+        />
+    ))
+}
+const Example = ({ data/* see data tab */ }) =>{
+   return(
+      <div className="pchart"> 
+    <ResponsiveLine
+
+         data={[   
+                {"id":"Lower Control Limit","color":"yellow",data:data.lclPlot},
+                {"id":"Upper Control Limit","color":"red",data:data.uclPlot},
+                {"id":"Control Limit","color":"green",data:data.clPlot},
+                {"id":"Sample fraction nonconforming","color":"orange",data:data.sampleData}
+               ]}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: 'point', min: 0, max: 'auto' }}
+        yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false }}
+        yFormat=" >-.2f"
+        curve="linear"
+        axisBottom={{
+            orient: 'bottom',
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Sample Number',
+            legendOffset: 38,
+            legendPosition: 'middle'
+        }}
+        axisLeft={{
+            orient: 'left',
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Sample fraction nonconforming',
+            legendOffset: -45,
+            legendPosition: 'middle'
+        }}
+        colors={{"scheme":"dark2"}}
+        pointSize={4}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabelYOffset={-12}
+        useMesh={true}
+        layers={['grid', 'markers', 'axes', ,DashedLine ,'areas' ,'crosshair', 'points', 'slices', 'mesh', 'legends']}
+        legends={[
+            {
+                anchor: 'top',
+                direction: 'row',
+                justify: false,
+                translateX: 0,
+                translateY: -30,
+                itemsSpacing: 160,
+                itemDirection: 'left-to-right',
+                itemWidth: 97,
+                itemHeight: 20,
+                itemOpacity: 0.75,
+                symbolSize: 15,
+                symbolShape: 'circle',
+                symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemBackground: 'rgba(0, 0, 0, .03)',
+                            itemOpacity: 1
+                        }
+                    }
+                ]
+            }
+        ]}
+    
+        
+    />
+
+    </div>
+);
+}
+export default Example;
