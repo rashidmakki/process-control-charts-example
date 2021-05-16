@@ -2,7 +2,7 @@
   "name": "process-control-charts-example",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rashidmakki.github.io/process-control-charts-example",
+  "homepage": "https://rashidmakki.github.io/process-control-charts-example/",
   "dependencies": {
     "@nivo/core": "^0.69.0",
     "@nivo/line": "^0.69.1",
