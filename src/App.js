@@ -1,27 +1,59 @@
 import React from "react";
-import Example from './components/pchart/pchart';
-import {pChart} from "process-control-charts-es6";
+import Form from './components/form/form';
+import PChart from './components/pchart/pchart';
+import NpChart from './components/npchart/npchart';
+import CChart from './components/cchart/cchart';
+import UChart from './components/uchart/uchart';
 
-export let data1=[];
 class App extends React.Component{
   constructor(){
     super();
     this.state={
-      data:{}
+        sampleValue:[],
+        sampleSize:null,
+        selectedChart:'',
+        curve:"",
+        colorScheme:"",
+        showChart:false
     }
   }
 
-  componentDidMount(){   
-  let data = [2,3,8,1,1,4,1,4,5,1,8,2,4,3,4,1,8,3,7,4];
-  let details = pChart(data,50);
-  data1=details;
-  this.setState({data:details})
+  onChange=(event)=>{
+    let {name,value}=event.target;
+    if(name==="sampleValue"){
+      let array=[];
+      value.split(",").map(item=> array.push(Number(item)));
+     return this.setState({sampleValue:array});
+    }else if(name==="sampleSize"){
+       let size=Number(value);
+     return this.setState({sampleSize:size});
+    }
+       this.setState({[name]:value});
   }
+
+  handleSubmit=(event)=>{
+    this.setState({showChart:true})
+  }
+
   render(){
-    const {data}=this.state;
+    let {selectedChart,showChart}=this.state;
     return (
     <div className="App">
-      <Example data={data} />
+      <Form onChange={this.onChange} handleSubmit={this.handleSubmit}/>
+      {
+       (showChart)?
+         (selectedChart==="pChart")?
+          <PChart {...this.state} />:
+             (selectedChart==="npChart")?
+             <NpChart {...this.state} />:
+               (selectedChart==="cChart")?
+                 <CChart {...this.state} />:
+                  (selectedChart==="uChart")?
+                   <UChart {...this.state} />:
+                     <h1> No Chart is selected </h1>
+          :
+          null
+      }  
     </div>
   );
   }
