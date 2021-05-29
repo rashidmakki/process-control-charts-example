@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/process-control-charts-example/static/css/main.32d356e2.chunk.css",
-    "main.js": "/process-control-charts-example/static/js/main.6e78f6a5.chunk.js",
-    "main.js.map": "/process-control-charts-example/static/js/main.6e78f6a5.chunk.js.map",
-    "runtime-main.js": "/process-control-charts-example/static/js/runtime-main.29b7b8c3.js",
-    "runtime-main.js.map": "/process-control-charts-example/static/js/runtime-main.29b7b8c3.js.map",
+    "main.css": "/process-control-charts-example/static/css/main.e486ca2c.chunk.css",
+    "main.js": "/process-control-charts-example/static/js/main.b52a6c2d.chunk.js",
+    "main.js.map": "/process-control-charts-example/static/js/main.b52a6c2d.chunk.js.map",
+    "runtime-main.js": "/process-control-charts-example/static/js/runtime-main.89eb6590.js",
+    "runtime-main.js.map": "/process-control-charts-example/static/js/runtime-main.89eb6590.js.map",
     "static/css/2.61b4cb56.chunk.css": "/process-control-charts-example/static/css/2.61b4cb56.chunk.css",
-    "static/js/2.c6fc5814.chunk.js": "/process-control-charts-example/static/js/2.c6fc5814.chunk.js",
-    "static/js/2.c6fc5814.chunk.js.map": "/process-control-charts-example/static/js/2.c6fc5814.chunk.js.map",
-    "static/js/3.38f5c733.chunk.js": "/process-control-charts-example/static/js/3.38f5c733.chunk.js",
-    "static/js/3.38f5c733.chunk.js.map": "/process-control-charts-example/static/js/3.38f5c733.chunk.js.map",
+    "static/js/2.e7d0c49f.chunk.js": "/process-control-charts-example/static/js/2.e7d0c49f.chunk.js",
+    "static/js/2.e7d0c49f.chunk.js.map": "/process-control-charts-example/static/js/2.e7d0c49f.chunk.js.map",
+    "static/js/3.bc1bf288.chunk.js": "/process-control-charts-example/static/js/3.bc1bf288.chunk.js",
+    "static/js/3.bc1bf288.chunk.js.map": "/process-control-charts-example/static/js/3.bc1bf288.chunk.js.map",
     "index.html": "/process-control-charts-example/index.html",
     "static/css/2.61b4cb56.chunk.css.map": "/process-control-charts-example/static/css/2.61b4cb56.chunk.css.map",
-    "static/css/main.32d356e2.chunk.css.map": "/process-control-charts-example/static/css/main.32d356e2.chunk.css.map",
-    "static/js/2.c6fc5814.chunk.js.LICENSE.txt": "/process-control-charts-example/static/js/2.c6fc5814.chunk.js.LICENSE.txt"
+    "static/css/main.e486ca2c.chunk.css.map": "/process-control-charts-example/static/css/main.e486ca2c.chunk.css.map",
+    "static/js/2.e7d0c49f.chunk.js.LICENSE.txt": "/process-control-charts-example/static/js/2.e7d0c49f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.29b7b8c3.js",
+    "static/js/runtime-main.89eb6590.js",
     "static/css/2.61b4cb56.chunk.css",
-    "static/js/2.c6fc5814.chunk.js",
-    "static/css/main.32d356e2.chunk.css",
-    "static/js/main.6e78f6a5.chunk.js"
+    "static/js/2.e7d0c49f.chunk.js",
+    "static/css/main.e486ca2c.chunk.css",
+    "static/js/main.b52a6c2d.chunk.js"
   ]
 }
