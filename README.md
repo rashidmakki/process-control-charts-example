@@ -1,10 +1,15 @@
 # process-control-charts-example
 examples to solve p-chart, np-chart, c-chart, u-chart
 
-##npm package
+## npm package
+* [process-control-charts](https://github.com/rashidmakki/process-control-charts/)
+* [process-control-charts-es6](https://github.com/rashidmakki/process-control-charts-es6/)
 
 ```
 npm install process-control-charts
+```
+```
+npm install process-control-charts-es6
 ```
 
 ## Available Scripts
