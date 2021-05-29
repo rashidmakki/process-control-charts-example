@@ -1,5 +1,6 @@
 import React from "react";
 import withComponent from "../hoc/hoc";
+import "../example/example.css";
 
 const TableData=(props)=>{
 	const {x,y}=props;
@@ -21,8 +22,8 @@ const UChart=(props)=>{
          <div className="row">
 
           <div className="col-md-3">
-          <div className="card border-dark mb-3 " >
-          <div className="card-body text-dark text-center">
+          <div className="card chart-card mb-3 " >
+          <div className="card-body text-center">
           <h5 className="card-title">Upper Control Limit</h5>
           <p className="card-text text-center"> {data.ucl}</p>
           </div>
@@ -30,8 +31,8 @@ const UChart=(props)=>{
           </div>
 
           <div className="col-md-3">
-          <div className="card border-dark mb-3 " >
-          <div className="card-body text-dark text-center">
+          <div className="card chart-card mb-3 " >
+          <div className="card-body text-center">
           <h5 className="card-title">Control Limit</h5>
           <p className="card-text text-center">{data.cl}</p>
           </div>
@@ -39,8 +40,8 @@ const UChart=(props)=>{
           </div>
 
           <div className="col-md-3">
-          <div className="card border-dark mb-3 " >
-          <div className="card-body text-dark text-center">
+          <div className="card chart-card mb-3 " >
+          <div className="card-body text-center">
           <h5 className="card-title">Lower Control Limit </h5>
           <p className="card-text">{data.lcl}</p>
           </div>    
@@ -48,18 +49,18 @@ const UChart=(props)=>{
           </div>
 
           <div className="col-md-3">
-          <div className="card border-dark mb-3 " >
-          <div className="card-body text-dark text-center">
+          <div className="card chart-card mb-3 " >
+          <div className="card-body text-center">
           <h5 className="card-title">Sample Out Of Control</h5>
           <p className="card-text text-center">{data.samplesOutOfControl}</p>
           </div>
           </div>  
           </div>        
           
-          <table className="table table-striped table-hover mt-3">
+          <table className="table table-bordered table-striped table-hover mt-3 mb-3 text-center">
           <thead className="table-dark">
           <tr>
-          <th>
+          <th className="w-50">
           <h5>Sample Number</h5>
           </th>
           <th>

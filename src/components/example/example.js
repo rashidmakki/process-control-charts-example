@@ -83,18 +83,18 @@ const Example = ({ data,curve,colorScheme}) =>{
         layers={['grid', 'markers', 'axes',DashedLine ,'areas' ,'crosshair', 'points', 'slices', 'mesh', 'legends']}
         legends={[
             {
-                anchor: 'top',
-                direction: 'row',
+                anchor: 'right',
+                direction: 'column',
                 justify: false,
-                translateX: 0,
-                translateY: -40,
-                itemsSpacing: 160,
-                itemDirection: 'left-to-right',
-                itemWidth: 100,
-                itemHeight: 20,
+                translateX: 83,
+                translateY: 8,
+                itemsSpacing:70,
+                itemDirection: 'top-to-bottom',
+                itemWidth: 56,
+                itemHeight: 38,
                 itemOpacity: 0.75,
-                symbolSize: 25,
-                symbolShape: 'circle',
+                symbolSize: 15,
+                symbolShape: 'diamond',
                 symbolBorderColor: 'rgba(0, 0, 0, .5)',
                 effects: [
                     {

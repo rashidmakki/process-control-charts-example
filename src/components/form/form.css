@@ -1,0 +1,12 @@
+.form-container{
+	min-height:100vh;
+}
+.example-card{
+	border-left:5px solid #0D6EFD !important;
+	border-top-left-radius:10% !important;
+	border-bottom-left-radius:10% !important;
+}
+.example-text{
+	font-size:18px;
+	color: grey;
+}

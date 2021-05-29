@@ -2,3 +2,10 @@
 	height: 500px;
 	width: 100%;
 }
+
+/* card border Layouting */
+.chart-card{
+	border-left:5px solid #212529 !important;
+	border-top-left-radius:10% !important;
+	border-bottom-left-radius:10% !important;
+}

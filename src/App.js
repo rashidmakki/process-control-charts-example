@@ -14,7 +14,8 @@ class App extends React.Component{
         selectedChart:'',
         curve:"",
         colorScheme:"",
-        showChart:false
+        showChart:false,
+        somethingWrong:null
     }
   }
 
@@ -32,13 +33,21 @@ class App extends React.Component{
   }
 
   handleSubmit=(event)=>{
-    this.setState({showChart:true})
+    let {selectedChart,sampleValue,sampleSize,colorScheme,curve}=this.state;
+    if(sampleSize!==null&&sampleValue!==[]&&curve!==''&&selectedChart!==''&&colorScheme!==''){
+     this.setState({showChart:true})
+    }else{
+      this.setState({somethingWrong:"Kindly fill data correctly"})
+    }
   }
 
+  componentWillUnmount(){
+    this.setState({somethingWrong:null})
+  }
   render(){
-    let {selectedChart,showChart}=this.state;
+    const {selectedChart,showChart,somethingWrong}=this.state;
     return (
-    <div className="App">
+    <div className="app-container">
       <Form onChange={this.onChange} handleSubmit={this.handleSubmit}/>
       {
        (showChart)?
@@ -50,9 +59,14 @@ class App extends React.Component{
                  <CChart {...this.state} />:
                   (selectedChart==="uChart")?
                    <UChart {...this.state} />:
-                     <h1> No Chart is selected </h1>
+                    <div className="container">
+                     <h1 align="center"> No Chart is selected </h1>
+                    </div>
           :
-          null
+                 (somethingWrong)?
+                  <div className="container">
+                     <h1 align="center"> {somethingWrong} </h1>
+                    </div>:null
       }  
     </div>
   );
