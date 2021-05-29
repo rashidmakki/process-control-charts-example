@@ -1,6 +1,12 @@
 # process-control-charts-example
 examples to solve p-chart, np-chart, c-chart, u-chart
 
+##npm package
+
+```
+npm install process-control-charts
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
